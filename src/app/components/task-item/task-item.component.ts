@@ -8,10 +8,14 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./task-item.component.css'],
 })
 export class TaskItemComponent implements OnInit {
-  @Input() task: Task;
+  @Input() task!: Task;
   faTimes = faTimes;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onDelete(task: object) {
+    console.log(task);
+  }
 }
